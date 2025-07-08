@@ -2,6 +2,7 @@
 const props = defineProps({
   msg: String,
 })
+const { msg } = props
 </script>
 
 <template>

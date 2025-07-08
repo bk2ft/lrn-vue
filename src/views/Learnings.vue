@@ -11,6 +11,7 @@ watchEffect(async () => {
   try {
     learningComponent.value = (await import(`@/learnings/${route.params.slug}/index.vue`)).default
   } catch (err) {
+    console.log(err)
     router.push('/400')
   }
 })
