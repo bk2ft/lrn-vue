@@ -1,5 +1,5 @@
 import { render, fireEvent } from '@testing-library/vue'
-import Counter from '../components/Counter.vue'
+import Counter from '@/components/Counter.vue'
 import { describe, it } from 'vitest'
 
 describe('Counter.vue', () => {

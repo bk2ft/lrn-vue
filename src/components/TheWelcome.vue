@@ -62,10 +62,10 @@ const openReadmeInEditor = () => fetch('/__open-in-editor?file=README.md')
     <a href="https://github.com/vuejs/devtools" target="_blank" rel="noopener">Vue Dev Tools</a>. If
     you need more resources, we suggest paying
     <a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">Awesome Vue</a>
-    a visit. Also look at my <RouterLink to="/learning/1">Learnings</RouterLink>, which runs
-    alongside the
-    <a href="https://vuejs.org/tutorial" target="_blank" rel="noopener">Vue Tutorial</a> for easy
-    reference.
+    a visit. Also look at my
+    <RouterLink to="/learning/1" class="learning-link">Learnings</RouterLink>, which runs alongside
+    the <a href="https://vuejs.org/tutorial" target="_blank" rel="noopener">Vue Tutorial</a> for
+    easy reference.
   </WelcomeItem>
 
   <WelcomeItem>

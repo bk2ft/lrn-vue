@@ -29,5 +29,8 @@ coverage
 
 *.tsbuildinfo
 
+test-results/
+playwright-report/
+
 misc/*
 !misc/.keep
