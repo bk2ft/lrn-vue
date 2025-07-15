@@ -82,5 +82,17 @@
     "title": "Slots",
     "tags": ["vue", "learning"],
     "description": "Slots"
+  },
+  {
+    "slug": "p1",
+    "title": "Pinia",
+    "tags": ["vue", "learning"],
+    "description": "Pinia"
+  },
+  {
+    "slug": "p2",
+    "title": "Pinia Check",
+    "tags": ["vue", "learning"],
+    "description": "Pinia Check"
   }
 ]
