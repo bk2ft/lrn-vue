@@ -22,12 +22,47 @@ watchEffect(async () => {
     <main class="main-content"><component :is="learningComponent" /></main>
     <section class="left-sidebar">
       <nav>
-        <BackLink />
-        <ul class="top-nav">
-          <li v-for="(learning, index) in learningsMeta" :key="index">
-            <RouterLink :to="`/learning/${learning.slug}`">{{ learning.title }}</RouterLink>
-          </li>
-        </ul>
+        <BackLink class="learning-back" />
+        <div class="accordion" id="accordionExample1">
+          <div
+            class="accordion-item"
+            v-for="(learningSection, index) in learningsMeta"
+            :key="index"
+          >
+            <h2 class="accordion-header">
+              <button
+                :class="`accordion-button ${index != 0 && 'collapsed'}`"
+                type="button"
+                data-bs-toggle="collapse"
+                :data-bs-target="`#collapse${index}`"
+                :aria-expanded="index == 0 ? 'true' : 'false'"
+                :aria-controls="`#collapse${index}`"
+              >
+                {{ learningSection.title }}
+              </button>
+            </h2>
+            <div
+              :id="`collapse${index}`"
+              :class="`accordion-collapse collapse ${index == 0 && 'show'}`"
+              data-bs-parent="#accordionExample1"
+            >
+              <div class="accordion-body">
+                <ol class="top-nav">
+                  <li v-for="(learning, index) in learningSection.views" :key="index">
+                    <RouterLink :to="`/learning/${learning.slug}`">{{ learning.title }}</RouterLink>
+                    <a
+                      v-if="learning.source && learning.source !== ''"
+                      :href="learning.source"
+                      target="_blank"
+                      class="btn btn-primary btn-src"
+                      >source</a
+                    >
+                  </li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
       </nav>
     </section>
   </div>
@@ -58,6 +93,7 @@ watchEffect(async () => {
   }
   .container > .main-content {
     width: calc(100% / 3 * 2);
+    padding-top: 50px;
   }
 }
 
@@ -66,6 +102,10 @@ watchEffect(async () => {
   order: -1;
 
   nav {
+    .learning-back {
+      padding-bottom: 10px;
+      display: block;
+    }
     ul {
       list-style: none; /* 6 */
       padding: 0;
@@ -78,14 +118,14 @@ watchEffect(async () => {
         }
       }
     }
-    > a {
-      display: block;
-      padding: 0.5rem 1rem; /* 3 */
-      color: var(--vt-c-text-dark-2);
-      &:hover {
-        background: none;
-      }
-    }
   }
+}
+.btn-src {
+  padding: 0.15rem 0.25rem;
+  font-size: 0.65em;
+  color: #0d6efd;
+  background-color: #fff;
+  border: 1px solid;
+  border-radius: 0.25rem;
 }
 </style>

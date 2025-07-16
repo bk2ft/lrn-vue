@@ -3,6 +3,9 @@ import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 import router from './router'
 import BackLink from '@/components/BackLink.vue'
+// import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap'
+import '@/scss/main.scss'
 
 import App from './App.vue'
 const pinia = createPinia()

@@ -1,98 +1,131 @@
 [
   {
-    "slug": "1",
-    "title": "Getting Started",
-    "tags": ["vue", "learning"],
-    "description": "Getting Started "
+    "title": "Vue Tutorial (The Basics)",
+    "views": [
+      {
+        "slug": "1",
+        "title": "Getting Started",
+        "source":"https://vuejs.org/tutorial/#step-1",
+        "tags": ["vue", "learning"],
+        "description": "Getting Started "
+      },
+      {
+        "slug": "2",
+        "title": "Declarative Rendering",
+        "source":"https://vuejs.org/tutorial/#step-2",
+        "tags": ["vue", "learning"],
+        "description": "Declarative Rendering "
+      },
+      {
+        "slug": "3",
+        "title": "Attribute Bindings",
+        "source":"https://vuejs.org/tutorial/#step-3",
+        "tags": ["vue", "learning"],
+        "description": "Attribute Bindings"
+      },
+      {
+        "slug": "4",
+        "title": "Event Listeners",
+        "source":"https://vuejs.org/tutorial/#step-4",
+        "tags": ["vue", "learning"],
+        "description": "Event Listeners"
+      },
+      {
+        "slug": "5",
+        "title": "Form Bindings",
+        "source":"https://vuejs.org/tutorial/#step-5",
+        "tags": ["vue", "learning"],
+        "description": "Form Bindings"
+      },
+      {
+        "slug": "6",
+        "title": "Conditional Rendering",
+        "source":"https://vuejs.org/tutorial/#step-6",
+        "tags": ["vue", "learning"],
+        "description": "Conditional Rendering"
+      },
+      {
+        "slug": "7",
+        "title": "List Rendering",
+        "source":"https://vuejs.org/tutorial/#step-7",
+        "tags": ["vue", "learning"],
+        "description": "List Rendering"
+      },
+      {
+        "slug": "8",
+        "title": "Computed Property",
+        "source":"https://vuejs.org/tutorial/#step-8",
+        "tags": ["vue", "learning"],
+        "description": "Computed Property"
+      },
+      {
+        "slug": "9",
+        "title": "Lifecycle and Template Refs",
+        "source":"https://vuejs.org/tutorial/#step-9",
+        "tags": ["vue", "learning"],
+        "description": "Lifecycle and Template Refs"
+      },
+      {
+        "slug": "10",
+        "title": "Watchers",
+        "source":"https://vuejs.org/tutorial/#step-10",
+        "tags": ["vue", "learning"],
+        "description": "Watchers"
+      },
+      {
+        "slug": "11",
+        "title": "Components",
+        "source":"https://vuejs.org/tutorial/#step-11",
+        "tags": ["vue", "learning"],
+        "description": "Components"
+      },
+      {
+        "slug": "12",
+        "title": "Props",
+        "source":"https://vuejs.org/tutorial/#step-12",
+        "tags": ["vue", "learning"],
+        "description": "Props"
+      },
+      {
+        "slug": "13",
+        "title": "Emits",
+        "source":"https://vuejs.org/tutorial/#step-13",
+        "tags": ["vue", "learning"],
+        "description": "Emits"
+      },
+      {
+        "slug": "14",
+        "title": "Slots",
+        "source":"https://vuejs.org/tutorial/#step-14",
+        "tags": ["vue", "learning"],
+        "description": "Slots"
+      }
+    ]
   },
   {
-    "slug": "2",
-    "title": "Declarative Rendering",
-    "tags": ["vue", "learning"],
-    "description": "Declarative Rendering "
-  },
-  {
-    "slug": "3",
-    "title": "Attribute Bindings",
-    "tags": ["vue", "learning"],
-    "description": "Attribute Bindings"
-  },
-  {
-    "slug": "4",
-    "title": "Event Listeners",
-    "tags": ["vue", "learning"],
-    "description": "Event Listeners"
-  },
-  {
-    "slug": "5",
-    "title": "Form Bindings",
-    "tags": ["vue", "learning"],
-    "description": "Form Bindings"
-  },
-  {
-    "slug": "6",
-    "title": "Conditional Rendering",
-    "tags": ["vue", "learning"],
-    "description": "Conditional Rendering"
-  },
-  {
-    "slug": "7",
-    "title": "List Rendering",
-    "tags": ["vue", "learning"],
-    "description": "List Rendering"
-  },
-  {
-    "slug": "8",
-    "title": "Computed Property",
-    "tags": ["vue", "learning"],
-    "description": "Computed Property"
-  },
-  {
-    "slug": "9",
-    "title": "Lifecycle and Template Refs",
-    "tags": ["vue", "learning"],
-    "description": "Lifecycle and Template Refs"
-  },
-  {
-    "slug": "10",
-    "title": "Watchers",
-    "tags": ["vue", "learning"],
-    "description": "Watchers"
-  },
-  {
-    "slug": "11",
-    "title": "Components",
-    "tags": ["vue", "learning"],
-    "description": "Components"
-  },
-  {
-    "slug": "12",
-    "title": "Props",
-    "tags": ["vue", "learning"],
-    "description": "Props"
-  },
-  {
-    "slug": "13",
-    "title": "Emits",
-    "tags": ["vue", "learning"],
-    "description": "Emits"
-  },
-  {
-    "slug": "14",
-    "title": "Slots",
-    "tags": ["vue", "learning"],
-    "description": "Slots"
-  },
-  {
-    "slug": "p1",
-    "title": "Pinia",
-    "tags": ["vue", "learning"],
-    "description": "Pinia"
-  },
-  {
-    "slug": "p2",
-    "title": "Pinia Check",
-    "tags": ["vue", "learning"],
-    "description": "Pinia Check"
+    "title": "Further Learning (Intermediate)",
+    "views": [
+      {
+        "slug": "p1",
+        "title": "Pinia",
+        "source":"https://pinia.vuejs.org/core-concepts/",
+        "tags": ["vue", "learning"],
+        "description": "Pinia"
+      },
+      {
+        "slug": "p2",
+        "title": "Pinia Check",
+        "source":"",
+        "tags": ["vue", "learning"],
+        "description": "Pinia Check"
+      },
+      {
+        "slug": "a1",
+        "title": "Animation",
+        "source":"",
+        "tags": ["vue", "learning"],
+        "description": "Animation"
+      }
+    ]
   }
 ]

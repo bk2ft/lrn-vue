@@ -12,4 +12,12 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url)),
     },
   },
+  css: {
+    preprocessorOptions: {
+      scss: {
+        // until new bootstrap sass release (https://getbootstrap.com/docs/5.3/customize/sass/)
+        silenceDeprecations: ['mixed-decls', 'color-functions', 'global-builtin', 'import'],
+      },
+    },
+  },
 })
