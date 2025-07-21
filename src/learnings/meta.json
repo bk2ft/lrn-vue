@@ -103,7 +103,7 @@
     ]
   },
   {
-    "title": "Further Learning (Intermediate)",
+    "title": "Further (Intermediate)",
     "views": [
       {
         "slug": "p1",
@@ -125,6 +125,25 @@
         "source":"",
         "tags": ["vue", "learning"],
         "description": "Animation"
+      }
+    ]
+  },
+  {
+    "title": "More (Advanced)",
+    "views": [
+      {
+        "slug": "g1",
+        "title": "GraphQL Query (client 2)",
+        "source":"https://v4.apollo.vuejs.org/guide-composable/query.html",
+        "tags": ["vue", "learning"],
+        "description": "GraphQL"
+      },
+      {
+        "slug": "g2",
+        "title": "GraphQL Subscription (default client, not active)",
+        "source":"https://v4.apollo.vuejs.org/guide-composable/subscription.html",
+        "tags": ["vue", "learning"],
+        "description": "GraphQL"
       }
     ]
   }
