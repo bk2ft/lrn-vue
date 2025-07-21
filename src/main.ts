@@ -2,7 +2,7 @@ import './assets/main.css'
 import { createApp, provide, h } from 'vue'
 import { createPinia } from 'pinia'
 import router from './router'
-import {ApolloClients } from '@vue/apollo-composable'
+import { ApolloClients } from '@vue/apollo-composable'
 import { apolloClient } from '@/apolloClient'
 import { apolloClientRm } from '@/apolloClientRm'
 import BackLink from '@/components/BackLink.vue'
@@ -17,7 +17,7 @@ const app = createApp({
     provide(ApolloClients, {
       default: apolloClient,
       rmClient: apolloClientRm,
-    }) // swap for apolloClientRandm to try other Vue component
+    })
   },
   render: () => h(App),
 })
