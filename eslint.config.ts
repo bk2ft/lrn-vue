@@ -20,15 +20,24 @@ export default defineConfigWithVueTs(
 
   pluginVue.configs['flat/essential'],
   vueTsConfigs.recommended,
-  
+
   {
     ...pluginVitest.configs.recommended,
     files: ['src/**/__tests__/*'],
   },
-  
+
   {
     ...pluginPlaywright.configs['flat/recommended'],
     files: ['e2e/**/*.{test,spec}.{js,ts,jsx,tsx}'],
   },
   skipFormatting,
+  {
+    rules: {
+      // override/add rules settings here, such as:
+      'vue/no-unused-vars': 'off',
+      'vue/block-lang': 'off',
+      '@typescript-eslint/no-explicit-any': 'off',
+      'vue/multi-word-component-names':'off'
+    },
+  },
 )

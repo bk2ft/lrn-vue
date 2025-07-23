@@ -1,6 +1,6 @@
 import { mount, flushPromises } from '@vue/test-utils'
 import { createRouter, createWebHistory } from 'vue-router'
-import { describe, it, expect, beforeEach, test } from 'vitest'
+import { describe, it, expect } from 'vitest'
 
 const App = {
   template: `
