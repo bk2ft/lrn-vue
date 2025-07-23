@@ -34,3 +34,8 @@ playwright-report/
 
 misc/*
 !misc/.keep
+
+/data/*
+!data/.keep
+!data/info.example.json
+!data/nav.example.json

@@ -114,10 +114,17 @@
       },
       {
         "slug": "p2",
-        "title": "Pinia Check",
+        "title": "Pinia check",
         "source":"",
         "tags": ["vue", "learning"],
-        "description": "Pinia Check"
+        "description": "Pinia check"
+      },
+      {
+        "slug": "p3",
+        "title": "Pinia complex",
+        "source":"",
+        "tags": ["vue", "learning"],
+        "description": "Pinia complex"
       },
       {
         "slug": "a1",
