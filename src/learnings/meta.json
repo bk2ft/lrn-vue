@@ -132,6 +132,20 @@
         "source":"",
         "tags": ["vue", "learning"],
         "description": "Animation"
+      },
+      {
+        "slug": "a2",
+        "title": "Transition Animation 1",
+        "source":"",
+        "tags": ["vue", "learning"],
+        "description": "Transition Animation 1"
+      },
+      {
+        "slug": "a3",
+        "title": "Transition Animation 2",
+        "source":"",
+        "tags": ["vue", "learning"],
+        "description": "Transition Animation 2"
       }
     ]
   },
