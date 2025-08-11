@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 import gql from 'graphql-tag'
 import { useQuery } from '@vue/apollo-composable'
 

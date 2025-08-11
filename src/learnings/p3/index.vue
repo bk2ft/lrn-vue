@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import { onMounted, onUnmounted } from 'vue'
 import { useGlobalStore } from '@/stores/global'
 import { storeToRefs } from 'pinia'
@@ -8,9 +8,9 @@ const { title, jwt, user, nav, width, height, navPos, top, left, right, bottom, 
   storeToRefs(store)
 
 const changeGlobals = () => {
-  const storeRoles = user.value.roles
+  const storeRoles = user?.value?.roles
   const newRole = 'global'
-  const roles = !storeRoles.includes(newRole) ? [...storeRoles, newRole] : storeRoles
+  const roles = storeRoles && !storeRoles.includes(newRole) ? [...storeRoles, newRole] : []
   store.loadGlobal({
     title: "Matt's App",
     // jwt,

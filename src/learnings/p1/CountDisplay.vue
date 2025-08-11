@@ -5,7 +5,7 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { useCounterStore, useCounterOptStore } from '@/stores/counter'
 import { storeToRefs } from 'pinia'
 const store = useCounterStore()

@@ -1,7 +1,7 @@
-<script setup>
+<script setup lang="ts">
 import gsap from 'gsap'
 import { useRouter } from 'vue-router'
-let elem = null
+let elem: gsap.TweenTarget = null
 const router = useRouter()
 
 function onClick() {
@@ -10,17 +10,20 @@ function onClick() {
     duration: 0.7,
     y: '120vh',
     opacity: 0,
-    onComplete: () => router.push('/learning/a3'),
+    onComplete() {
+      router.push('/learning/a3')
+    },
   })
 }
 
-function beforeEnter(el) {
-  el.style.opacity = '0'
-  el.style.transform = 'translateY(calc(100vh + 100px))'
+function beforeEnter(el: Element) {
+  const hel = el as HTMLElement
+  hel.style.opacity = '0'
+  hel.style.transform = 'translateY(calc(100vh + 100px))'
 }
 
 // where the animation will end up
-function enter(el) {
+function enter(el: gsap.TweenTarget) {
   elem = el
   gsap.to(el, {
     duration: 1.4,

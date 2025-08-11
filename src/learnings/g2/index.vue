@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 import gql from 'graphql-tag'
 import { watch } from 'vue'
 import { useSubscription } from '@vue/apollo-composable'
@@ -8,7 +8,9 @@ const INC_SUBSCRIPTION = gql`
     numberIncremented
   }
 `
-
+interface Increment {
+  numberIncremented: number
+}
 export default {
   setup() {
     const { result, loading, error } = useSubscription(INC_SUBSCRIPTION)
@@ -16,10 +18,14 @@ export default {
     watch(
       result,
       (data) => {
-        console.log('New message received:', data.numberIncremented)
+        const resData: Increment = data as unknown as Increment
+        console.log('New message received:', resData.numberIncremented)
       },
       {
-        lazy: true, // Don't immediately execute handler
+        //lazy by default & not supported by typescript. Trying 'eager' watcher for opposite effect instead
+        // https://vuejs.org/guide/essentials/watchers#eager-watchers
+        //lazy: true, // Don't immediately execute handler
+        immediate: false,
       },
     )
     return { result, loading, error }

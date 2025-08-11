@@ -1,7 +1,7 @@
-<script setup>
+<script setup lang="ts">
 import gsap from 'gsap'
-import { useRouter } from 'vue-router'
-let elem = null
+import { RouterLink, useRouter } from 'vue-router'
+let elem: gsap.TweenTarget = null
 const router = useRouter()
 
 function onClick() {
@@ -22,18 +22,20 @@ function onClick() {
       duration: 1.7,
       x: '120vw',
       opacity: 0,
-      onComplete: () => router.push('/learning/a2'),
+      onComplete() {
+        router.push('/learning/a2')
+      },
     })
 }
 
-function beforeEnter(el) {
-  el.style.opacity = '0'
-  el.style.transform = 'translateX(calc(100vw + 100px))'
-  el.style.display = 'inline-block'
+function beforeEnter(el: Element) {
+  const hel = el as HTMLElement
+  hel.style.transform = 'translateX(calc(100vw + 100px))'
+  hel.style.display = 'inline-block'
 }
 
 // where the animation will end up
-function enter(el) {
+function enter(el: gsap.TweenTarget) {
   elem = el // assign to scoped variable so other methods can affect element
   gsap.to(el, {
     duration: 1.4,
@@ -47,6 +49,9 @@ function enter(el) {
   <button @click="onClick">Page 1</button>
   <div class="w100"></div>
   <transition appear @before-enter="beforeEnter" @enter="enter">
-    <h1>Transition Page 2</h1>
+    <template>
+      <h1>Transition Page 2</h1>
+      <RouterLink :to="`/home`">dedicated homepage example</RouterLink>
+    </template>
   </transition>
 </template>

@@ -5,7 +5,7 @@ import info from '../../data/info.json'
 type Positions = {
   [key: string]: string | number
 }
-// Define a type for the slice state
+// Define a type for the store state
 interface GlobalState {
   title?: string
   jwt?: string | undefined
@@ -23,7 +23,7 @@ interface GlobalState {
 export const useGlobalStore = defineStore('global', {
   // arrow function recommended for full type inference
   state: (): GlobalState => {
-    const {innerWidth, innerHeight} = window
+    const { innerWidth, innerHeight } = window
     return {
       // all these properties will have their type inferred automatically
       title: info.title,
@@ -47,20 +47,20 @@ export const useGlobalStore = defineStore('global', {
     }
   },
   actions: {
-    loadGlobal(args: { title: any; jwt: any; user: any; nav: any }) {
+    loadGlobal(args: GlobalState) {
       const { title, jwt, user, nav } = args
       this.title = title || this.title
       this.jwt = jwt || this.jwt
       this.user = user || this.user
       this.nav = nav || this.nav
     },
-    resizeGlobal(args: { navPos: any }) {
+    resizeGlobal(args: GlobalState) {
       const { navPos } = args
       this.width = window.innerWidth
       this.height = window.innerHeight
       this.navPos = navPos || this.navPos
     },
-    setGlobal(args: { section: any; top: any; left: any }) {
+    setGlobal(args: GlobalState) {
       const { section, top, left } = args
       this.section = section || this.section
       this.top = top || this.top
