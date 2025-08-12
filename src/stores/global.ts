@@ -11,8 +11,8 @@ interface GlobalState {
   jwt?: string | undefined
   user?: { name: string | undefined; roles: string[] | null }
   nav?: object
-  width?: number
-  height?: number
+  width?: string | number
+  height?: string | number
   navPos?: Positions
   top?: string | number
   left?: string | number

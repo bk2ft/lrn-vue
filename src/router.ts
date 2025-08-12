@@ -15,11 +15,19 @@ const routes = [
     path: '/home',
     name: 'HomeWeb',
     component: HomeWeb,
+    meta: {
+      title: 'About this App',
+      description: 'Description of About this App',
+    },
   },
   {
     path: '/learning/:slug',
     name: 'Learning',
     component: Learnings,
+    meta: {
+      title: 'Learnings',
+      description: 'Description of Learnings',
+    },
   },
   { path: '/:pathMatch(.*)*', component: NotFound },
 ]
@@ -27,6 +35,19 @@ const routes = [
 const router = createRouter({
   history: createWebHistory(),
   routes,
+})
+
+router.beforeEach((to) => {
+  const { title, description } = to.meta
+  const defaultTitle = 'Vue App'
+  const defaultDescription = 'Default Description'
+
+  document.title = (title as string) || defaultTitle
+
+  const descriptionElement = document.querySelector('head meta[name="description"]')
+
+  descriptionElement &&
+    descriptionElement.setAttribute('content', (description as string) || defaultDescription)
 })
 
 export default router
