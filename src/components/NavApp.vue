@@ -12,7 +12,7 @@ console.log(routes)
   <!-- <h2>{{ msg || 'No props passed yet' }}</h2> -->
   <!-- <div :class="`btn btn-nav btn-inline ${activeClass} ${disClass}`"> -->
   <div :class="`btn btn-nav btn-inline`">
-    <RouterLink :to="routes[4].link">
+    <RouterLink :to="routes && routes[4].link">
       <!-- <Link
                 to={to}
                 onClick={redirect ? onClick : noClick}
