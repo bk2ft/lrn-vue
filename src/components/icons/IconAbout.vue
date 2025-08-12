@@ -9,7 +9,7 @@
     width="30"
   >
     <defs>
-      <component is="style">.cls-1 { fill: #000; }</component>
+      <svg:style type="text/css">.cls-1 { fill: #000; }</svg:style>
     </defs>
     <g>
       <path

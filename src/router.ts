@@ -46,8 +46,7 @@ router.beforeEach((to) => {
 
   const descriptionElement = document.querySelector('head meta[name="description"]')
 
-  descriptionElement &&
-    descriptionElement.setAttribute('content', (description as string) || defaultDescription)
+  descriptionElement?.setAttribute('content', (description as string) || defaultDescription)
 })
 
 export default router
