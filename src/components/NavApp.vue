@@ -1,9 +1,10 @@
 <script setup lang="ts">
 import { RouterLink } from 'vue-router'
 import IconAbout from '@/components/icons/IconAbout.vue'
-const props = defineProps({
-  routes: Object,
-})
+import { type Route } from '@/types'
+const props = defineProps<{
+  routes: Route[]
+}>()
 const { routes } = props
 console.log(routes)
 </script>
