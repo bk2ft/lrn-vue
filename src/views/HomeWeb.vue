@@ -10,6 +10,8 @@ const strap = import.meta.env.VITE_APP_STRAP
 const store = useGlobalStore()
 const { height, navPos } = storeToRefs(store)
 
+import { type Route } from '@/types.d'
+
 const handleWindowSizeChange = () => {
   store.resizeGlobal({})
   resizeReset()
@@ -98,7 +100,7 @@ function enter(el: any) {
         opacity,
       }"
     >
-      <NavApp :routes="routes.main" />
+      <NavApp :routes="routes.main as Route[]" />
     </div>
   </div>
 </template>

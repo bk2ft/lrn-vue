@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { RouterLink } from 'vue-router'
 import IconAbout from '@/components/icons/IconAbout.vue'
-import { type Route } from '@/types'
+import { type Route } from '@/types.d'
 const props = defineProps<{
   routes: Route[]
 }>()
